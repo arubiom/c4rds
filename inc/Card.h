@@ -20,11 +20,13 @@ class Card {
 	public:
 		Card(cardSuits cs=cardSuits::oros, int v, int p = 0);
 
-		inline cardSuits getSuit() {return suit;}
+		Card(Card c);
 
-		inline int getValue() {return value;}
+		cardSuits getSuit();
 
-		inline int getPoints() {return points;}
+		int getValue();
+
+		int getPoints();
 };
 
 

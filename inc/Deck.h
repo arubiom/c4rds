@@ -23,20 +23,21 @@ class Deck {
 
 		Deck(int m);
 
-		Deck(Deck d);
+		Deck(Deck& d);
 
-		int getMax();
+		int getMax() const;
 
-		vector<Card> getCards();
+		vector<Card> getCards() const;
 
-		inline int size() {return cards.size();}
+		inline int size() const {return cards.size();}
 
-		void addCard(Card c);
+		void addCard(const Card c);
 
-		Card removeCard();
+		Card removeCard(int i);
 
-		void shuffle();
+		void shuffle(int seed);
 
+		Deck& operator=(const Deck& d);
 
 };
 
