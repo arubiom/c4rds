@@ -7,24 +7,22 @@
 
 #include "../inc/Card.h"
 
-Card::Card(cardSuits cs=cardSuits::oros, int v, int p = 0) {
+Card::Card(cardSuits cs, int v, int p) {
 	suit = cs;
 	value = v;
 	points = p;
 }
 
-Card::Card(Card c) {
-    this(c.getSuit(), c.getValue(), c.getPoints());
-}
+Card::Card(const Card& c) : Card(c.getSuit(), c.getValue(), c.getPoints()) {}
 
-cardSuits Card::getSuits() {
+cardSuits Card::getSuit() const {
     return suit;
 }
 
-int Card::getValue() {
+int Card::getValue() const {
     return value;
 }
 
-int Card::getPoints() {
+int Card::getPoints() const {
     return points;
 }

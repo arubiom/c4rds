@@ -7,7 +7,7 @@
 
 #include <vector>
 #include <algorithm>
-#include "Card.h"
+#include "../inc/Card.h"
 using namespace std;
 
 #ifndef INC_DECK_H_

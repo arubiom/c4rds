@@ -18,15 +18,15 @@ class Card {
 		int points;
 
 	public:
-		Card(cardSuits cs=cardSuits::oros, int v, int p = 0);
+		Card(cardSuits cs, int v, int p);
 
-		Card(Card c);
+		Card(const Card& c);
 
-		cardSuits getSuit();
+		cardSuits getSuit() const;
 
-		int getValue();
+		int getValue() const;
 
-		int getPoints();
+		int getPoints() const;
 };
 
 
