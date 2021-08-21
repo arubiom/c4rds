@@ -7,6 +7,11 @@
 
 #include "../inc/Deck.h"
 
+Deck::Deck() {
+	cards.clear();
+	max = 0;
+}
+
 Deck::Deck(int m) {
 	max = m;
 	cards.clear();
@@ -29,10 +34,14 @@ void Deck::addCard(const Card c) {
 }
 
 Card Deck::removeCard(int i) {
-    Card ret(cards[i]);
-    cards.erase(cards.begin()+i);
+	if (i >= 0 && i < size()) {
+		Card ret(cards[i]);
+    	cards.erase(cards.begin()+i);
 
-    return ret;
+    	return ret;
+	}
+
+	return NULL;
 }
 
 void Deck::shuffle(int seed = 1) {

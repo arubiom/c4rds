@@ -21,11 +21,11 @@ class Player {
 
 		int getPoints() const;
 
-		Deck getCurrentsCards() const;
+		Deck getCurrentCards() const;
 
 		void draw(Deck &d, int n=1);
 
-
+		Card removeCard(int i);
 };
 
 

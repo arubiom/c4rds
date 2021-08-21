@@ -21,6 +21,8 @@ class Deck {
 
 	public:
 
+		Deck();
+
 		Deck(int m);
 
 		Deck(Deck& d);

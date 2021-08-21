@@ -18,6 +18,8 @@ class Card {
 		int points;
 
 	public:
+		Card();
+
 		Card(cardSuits cs, int v, int p);
 
 		Card(const Card& c);

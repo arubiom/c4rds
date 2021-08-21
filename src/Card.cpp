@@ -7,6 +7,13 @@
 
 #include "../inc/Card.h"
 
+Card::Card() {
+	suit = cardSuits::oros;
+	value = 1;
+	points = 0;
+
+}
+
 Card::Card(cardSuits cs, int v, int p) {
 	suit = cs;
 	value = v;
