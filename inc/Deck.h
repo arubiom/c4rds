@@ -25,7 +25,7 @@ class Deck {
 
 		Deck(int m);
 
-		Deck(Deck& d);
+		Deck(const Deck& d);
 
 		int getMax() const;
 
@@ -35,7 +35,7 @@ class Deck {
 
 		void addCard(const Card c);
 
-		Card removeCard(int i);
+		bool removeCard(int i, Card& c);
 
 		void shuffle(int seed);
 

@@ -33,3 +33,14 @@ int Card::getValue() const {
 int Card::getPoints() const {
     return points;
 }
+
+Card& Card::operator=(const Card& c) {
+	if (this == &c)
+		return *this;
+
+	suit = c.getSuit();
+	value = c.getValue();
+	points = c.getPoints();
+
+	return *this;
+}

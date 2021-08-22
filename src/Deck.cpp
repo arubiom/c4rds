@@ -17,7 +17,7 @@ Deck::Deck(int m) {
 	cards.clear();
 }
 
-Deck::Deck(Deck& d) : Deck(d.getMax()) {
+Deck::Deck(const Deck& d) : Deck(d.getMax()) {
 	cards = d.getCards();
 }
 
@@ -33,15 +33,16 @@ void Deck::addCard(const Card c) {
     cards.push_back(c);
 }
 
-Card Deck::removeCard(int i) {
+bool Deck::removeCard(int i, Card& c) {
 	if (i >= 0 && i < size()) {
 		Card ret(cards[i]);
     	cards.erase(cards.begin()+i);
+    	c = ret;
 
-    	return ret;
+    	return true;
 	}
 
-	return NULL;
+	return false;
 }
 
 void Deck::shuffle(int seed = 1) {

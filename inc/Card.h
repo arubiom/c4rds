@@ -29,6 +29,8 @@ class Card {
 		int getValue() const;
 
 		int getPoints() const;
+
+		Card& operator=(const Card& c);
 };
 
 
