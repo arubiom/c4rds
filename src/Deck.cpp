@@ -46,6 +46,7 @@ bool Deck::removeCard(int i, Card& c) {
 }
 
 void Deck::shuffle(int seed = 1) {
+	srand(time(NULL));
 	random_shuffle(cards.begin(), cards.end());
 }
 

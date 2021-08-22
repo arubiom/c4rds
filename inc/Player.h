@@ -9,13 +9,15 @@
 #define INC_PLAYER_H_
 
 #include "Deck.h"
+#include <string>
 
 class Player {
 	private:
 		int points;
 		Deck currentCards;
+		string name;
 	public:
-		Player(const Deck& c);
+		Player(const string n, const Deck& c);
 
 		Player(const Player& p);
 
@@ -26,6 +28,10 @@ class Player {
 		void draw(Deck &d, int n);
 
 		bool removeCard(int i, Card& c);
+
+		string getName() const;
+
+		void addPoints(int p);
 };
 
 

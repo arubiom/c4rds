@@ -6,16 +6,19 @@
 CPP_SRCS += \
 ../src/Card.cpp \
 ../src/Deck.cpp \
+../src/Desk.cpp \
 ../src/Player.cpp 
 
 OBJS += \
 ./src/Card.o \
 ./src/Deck.o \
+./src/Desk.o \
 ./src/Player.o 
 
 CPP_DEPS += \
 ./src/Card.d \
 ./src/Deck.d \
+./src/Desk.d \
 ./src/Player.d 
 
 

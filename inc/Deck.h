@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <algorithm>
+#include <time.h>
 #include "../inc/Card.h"
 using namespace std;
 
