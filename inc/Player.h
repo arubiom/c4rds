@@ -23,9 +23,9 @@ class Player {
 
 		Deck getCurrentCards() const;
 
-		void draw(Deck &d, int n=1);
+		void draw(Deck &d, int n);
 
-		Card removeCard(int i);
+		bool removeCard(int i, Card& c);
 };
 
 

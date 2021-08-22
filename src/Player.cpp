@@ -26,18 +26,21 @@ Deck Player::getCurrentCards() const {
 	return currentCards;
 }
 
-void Player::draw(Deck& d, int n = 1) {
+void Player::draw(Deck& d, int n) {
+
+	bool valid = false;
 
 	for (int i = 0; i < n; ++i) {
-		Card c(d.removeCard(0));
+		Card c;
+		valid = d.removeCard(0, c);
 
-		if (c != NULL)
+		if (valid != false)
 			currentCards.addCard(c);
 		else
 			break;
 	}
 }
 
-Card Player::removeCard(int i) {
-	return currentCards.removeCard(i);
+bool Player::removeCard(int i, Card& c) {
+	return currentCards.removeCard(i, c);
 }
