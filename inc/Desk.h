@@ -5,12 +5,12 @@
  *      Author: arubiom
  */
 
-#ifndef INC_DESK_H_
-#define INC_DESK_H_
-
 #include "Player.h"
 #include "GameState.h"
 #include <iostream>
+
+#ifndef INC_DESK_H_
+#define INC_DESK_H_
 
 class Desk {
 	private:
@@ -23,9 +23,15 @@ class Desk {
 	public:
 		Desk(int m);
 
+		virtual ~Desk() = 0;
+
 		virtual void setHeap() = 0;
 
 		virtual bool play() = 0;
+
+		virtual void showRules() = 0;
+
+		void nextTurn();
 
 		void win(const vector<Player> winners) const;
 

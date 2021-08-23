@@ -11,8 +11,7 @@
 Desk::Desk(int m) {
 	maxPlayers = m;
 	players.clear();
-	srand(time(0));
-	currentPlayerIndex = rand() % m;
+	currentPlayerIndex = 0;
 	state = gameState::init;
 }
 
@@ -40,3 +39,12 @@ void Desk::addPlayer(Player &p) {
 	}
 }
 
+
+void Desk::nextTurn() {
+	if (state == gameState::init) {
+		srand(time(NULL));
+		currentPlayerIndex = rand() % maxPlayers;
+	} else if (state == gameState::check || state == gameState::done) {
+		currentPlayerIndex = (currentPlayerIndex+1) % maxPlayers;
+	}
+}

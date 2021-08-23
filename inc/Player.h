@@ -5,11 +5,12 @@
  *      Author: arubiom
  */
 
-#ifndef INC_PLAYER_H_
-#define INC_PLAYER_H_
 
 #include "Deck.h"
 #include <string>
+
+#ifndef INC_PLAYER_H_
+#define INC_PLAYER_H_
 
 class Player {
 	private:
@@ -20,6 +21,8 @@ class Player {
 		Player(const string n, const Deck& c);
 
 		Player(const Player& p);
+
+		~Player();
 
 		int getPoints() const;
 

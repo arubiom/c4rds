@@ -28,6 +28,8 @@ class Deck {
 
 		Deck(const Deck& d);
 
+		~Deck();
+
 		int getMax() const;
 
 		vector<Card> getCards() const;

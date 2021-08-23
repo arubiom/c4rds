@@ -24,6 +24,8 @@ class Card {
 
 		Card(const Card& c);
 
+		~Card();
+
 		cardSuits getSuit() const;
 
 		int getValue() const;
