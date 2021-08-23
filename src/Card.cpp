@@ -22,6 +22,8 @@ Card::Card(cardSuits cs, int v, int p) {
 
 Card::Card(const Card& c) : Card(c.getSuit(), c.getValue(), c.getPoints()) {}
 
+Card::~Card() {}
+
 cardSuits Card::getSuit() const {
     return suit;
 }

@@ -44,6 +44,7 @@ void Desk::nextTurn() {
 	if (state == gameState::init) {
 		srand(time(NULL));
 		currentPlayerIndex = rand() % maxPlayers;
+		state = gameState::playerThink;
 	} else if (state == gameState::check || state == gameState::done) {
 		currentPlayerIndex = (currentPlayerIndex+1) % maxPlayers;
 	}

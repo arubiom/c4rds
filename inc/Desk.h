@@ -13,7 +13,7 @@
 #define INC_DESK_H_
 
 class Desk {
-	private:
+	protected:
 		Deck heap;
 		int maxPlayers;
 		vector<Player> players;
@@ -26,6 +26,8 @@ class Desk {
 		virtual ~Desk() = 0;
 
 		virtual void setHeap() = 0;
+
+		virtual bool init(vector<string> names) = 0;
 
 		virtual bool play() = 0;
 

@@ -21,6 +21,8 @@ Deck::Deck(const Deck& d) : Deck(d.getMax()) {
 	cards = d.getCards();
 }
 
+Deck::~Deck() {}
+
 vector<Card> Deck::getCards() const {
 	return cards;
 }

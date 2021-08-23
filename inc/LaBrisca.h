@@ -10,9 +10,9 @@
 #ifndef INC_LABRISCA_H_
 #define INC_LABRISCA_H_
 
-
-class LaBrisca: Desk {
+class LaBrisca: public Desk {
 	private:
+		const int MAXCARDS = 3;
 		Card priority;
 	public:
 
